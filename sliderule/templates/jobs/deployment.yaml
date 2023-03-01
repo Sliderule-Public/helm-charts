@@ -1,0 +1,131 @@
+{{ if .Values.deploy_jobs }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shieldrule-jobs
+spec:
+  replicas: 1
+  progressDeadlineSeconds: 1200
+  selector:
+    matchLabels:
+      app: shieldrule-jobs
+      role: shieldrule-jobs-role
+  strategy: { }
+  template:
+    metadata:
+      labels:
+        app: shieldrule-jobs
+        role: shieldrule-jobs-role
+    spec:
+      {{ if .Values.service_account_role }}
+      serviceAccountName: tasks
+      {{ end }}
+      terminationGracePeriodSeconds: 300
+      containers:
+        - image: "{{ .Values.api_image_url }}:{{ .Values.SHIELDRULE_ENVIRONMENT }}"
+          imagePullPolicy: Always
+          name: shieldrule-jobs
+          ports:
+            - containerPort: 8000
+            - containerPort: 9520
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8000
+            timeoutSeconds: 10
+            initialDelaySeconds: 300
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8000
+            timeoutSeconds: 10
+            initialDelaySeconds: 300
+            successThreshold: 3
+          resources:
+            requests:
+              memory: {{ .Values.api.resources.requests.memory }}
+              cpu: {{ .Values.api.resources.requests.cpu }}
+            limits:
+              memory: {{ .Values.api.resources.limits.memory }}
+              cpu: {{ .Values.api.resources.limits.cpu }}
+          envFrom:
+            - secretRef:
+                name: api-secret
+          volumeMounts:
+            - mountPath: /tmp
+              name: shieldrule-jobs-tmpfs
+          securityContext:
+            capabilities:
+              drop:
+                - all
+          env:
+            - name: POSTGRES_HOST
+              value: {{ .Values.JOBS_POSTGRES_HOST| quote }}
+            - name: POSTGRES_PORT
+              value: {{ .Values.JOBS_POSTGRES_PORT | quote }}
+            - name: POSTGRES_DB
+              value: {{ .Values.JOBS_POSTGRES_DB | quote }}
+            - name: AUDIENCE_URL
+              value: {{ .Values.JOBS_AUDIENCE_URL | quote }}
+            - name: ISSUER_URL
+              value: {{ .Values.JOBS_ISSUER_URL | quote }}
+            - name: AUTH0_ENVIRONMENT_PREFIX
+              value: {{ .Values.JOBS_AUTH0_ENVIRONMENT_PREFIX | quote }}
+            - name: RESET_DB
+              value: {{ .Values.JOBS_RESET_DB | quote }}
+            - name: USE_AUTH_0
+              value: {{ .Values.JOBS_USE_AUTH_0 | quote }}
+            - name: ENVIRONMENT
+              value: {{ .Values.JOBS_ENVIRONMENT | quote }}
+            - name: SENTRY_ENVIRONMENT
+              value: {{ .Values.JOBS_SENTRY_ENVIRONMENT | quote }}
+            - name: METRICS_NAMESPACE
+              value: {{ .Values.JOBS_METRICS_NAMESPACE | quote }}
+            - name: SLACK_REDIRECT_URI
+              value: {{ .Values.JOBS_SLACK_REDIRECT_URI | quote }}
+            - name: SHIELDRULE_ENVIRONMENT
+              value: {{ .Values.JOBS_SHIELDRULE_ENVIRONMENT | quote }}
+            - name: USE_INSTANCE_PROFILE
+              value: {{ .Values.JOBS_USE_INSTANCE_PROFILE | quote }}
+            - name: SERVER_BUCKET
+              value: {{ .Values.JOBS_SERVER_BUCKET | quote }}
+            - name: REDIS_HOST
+              value: {{ .Values.JOBS_REDIS_HOST | quote }}
+            - name: REDIS_PORT
+              value: {{ .Values.JOBS_REDIS_PORT | quote }}
+            - name: USE_REDIS
+              value: {{ .Values.JOBS_USE_REDIS | quote }}
+            - name: USE_SQS
+              value: {{ .Values.JOBS_USE_SQS | quote }}
+            - name: SQS_QUEUE_NAME
+              value: {{ .Values.JOBS_SQS_QUEUE_NAME | quote }}
+            - name: SQS_URL
+              value: {{ .Values.JOBS_SQS_URL | quote }}
+            - name: SERVER_MODE
+              value: async_job
+        - name: prometheus
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: 256Mi
+              cpu: 128m
+            limits:
+              memory: 256Mi
+              cpu: 128m
+          image: "{{ .Values.prometheus_image_url }}:{{ .Values.SHIELDRULE_ENVIRONMENT }}"
+          env:
+            - name: SHIELDRULE_ENVIRONMENT
+              value: {{ .Values.SHIELDRULE_ENVIRONMENT | quote }}
+            - name: SERVICE
+              value: "jobs"
+          ports:
+            - containerPort: 12346
+          securityContext:
+            runAsUser: 65534
+            runAsGroup: 65534
+      restartPolicy: Always
+      volumes:
+        - emptyDir: { }
+          name: shieldrule-jobs-tmpfs
+status: { }
+{{ end }}

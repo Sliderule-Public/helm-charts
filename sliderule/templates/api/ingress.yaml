@@ -1,0 +1,21 @@
+{{ if .Values.enable_aws_alb }}
+
+apiVersion: elbv2.k8s.aws/v1beta1
+kind: TargetGroupBinding
+metadata:
+  name: api-tgb
+spec:
+  serviceRef:
+    name: shieldrule-api-service
+    port: 8000
+  targetGroupARN: {{ .Values.api_tg_arn }}
+  networking:
+    ingress:
+      - from:
+          - securityGroup:
+              groupID: {{ .Values.alb_sg_id }}
+        ports:
+          - port: 8000
+          - port: 9520
+            
+{{ end }}

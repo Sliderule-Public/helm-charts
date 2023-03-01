@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  sliderule_demo:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-03-01T10:37:05.920663-06:00"
+    description: A self-sustained demo of the sliderule application
+    digest: 93debd1d1908037e5724970da2b5baadc3c70d11d4af44ca4069e8236576cb94
+    name: sliderule_demo
+    type: application
+    urls:
+    - https://sliderule-public.github.io/helm-charts/packages/sliderule_demo-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-03-01T10:37:05.91996-06:00"

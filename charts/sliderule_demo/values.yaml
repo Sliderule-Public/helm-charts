@@ -1,0 +1,61 @@
+ports:
+  web: 30155
+  api: 30157
+  db: 30154
+
+RESET_DB: false
+USE_AUTH_0: false
+USE_INSTANCE_PROFILE: true
+USE_REDIS: true
+USE_SQS: true
+ENVIRONMENT: sliderule-demo
+
+POSTGRES_HOST:
+POSTGRES_PORT: 5432
+POSTGRES_DB: "sliderulesample"
+POSTGRES_USER: "sliderulesample"
+POSTGRES_PASSWORD: "sliderulesample"
+AUDIENCE_URL: https://demo.sliderule.io/api
+ISSUER_URL: https://sliderule-auth.us.auth0.com/
+AUTH0_ENVIRONMENT_PREFIX: demo
+SENTRY_ENVIRONMENT: demo
+METRICS_NAMESPACE: development
+SLACK_REDIRECT_URI: https://demo.sliderule.io/credentials
+SHIELDRULE_ENVIRONMENT: demo
+EMAIL_USER_TOKEN:
+EMAIL_USER_KEY:
+SERVER_BUCKET:
+REDIS_HOST:
+REDIS_PORT:
+SQS_QUEUE_NAME: modernlogic-demo-sls
+SQS_URL:
+
+web_image_url: 600592424179.dkr.ecr.us-west-1.amazonaws.com/shieldrule-web
+api_image_url: 600592424179.dkr.ecr.us-west-1.amazonaws.com/shieldrule-api
+# default resources for the frontend service
+web:
+  count: 1
+  resources:
+    requests:
+      memory: "1024Mi"
+      cpu: "512m"
+    limits:
+      memory: "1024Mi"
+      cpu: "512m"
+
+# default resources for the API service
+api:
+  count: 1
+  resources:
+    requests:
+      memory: "4000Mi"
+      cpu: "1500m"
+    limits:
+      memory: "4000Mi"
+      cpu: "1500m"
+  paths:
+    - /admin
+    - /v1
+    - /api
+    - /auth
+    - /actuator

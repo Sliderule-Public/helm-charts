@@ -1,0 +1,17 @@
+apiVersion: elbv2.k8s.aws/v1beta1
+kind: TargetGroupBinding
+metadata:
+  name: web-tgb
+spec:
+  serviceRef:
+    name: shieldrule-web-service
+    port: 8000
+  targetGroupARN: {{ .Values.web_tg_arn }}
+  networking:
+    ingress:
+      - from:
+          - securityGroup:
+              groupID: {{ .Values.alb_sg_id }}
+        ports:
+          - port: 8000
+          - port: 9520

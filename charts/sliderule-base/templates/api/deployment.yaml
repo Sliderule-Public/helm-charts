@@ -104,6 +104,7 @@ spec:
               value: {{ .Values.SERVER_MODE | quote }}
             - name: COLUMN_KEY_ARN
               value: {{ .Values.COLUMN_KEY_ARN | quote }}
+        {{ if .Values.enable_prometheus }}
         - name: prometheus
           imagePullPolicy: Always
           resources:
@@ -128,4 +129,5 @@ spec:
       volumes:
         - emptyDir: { }
           name: shieldrule-api-tmpfs
+      {{ end }}
 status: { }

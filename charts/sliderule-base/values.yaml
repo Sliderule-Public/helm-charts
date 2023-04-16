@@ -20,6 +20,8 @@ api_image_url:
 prometheus_image_url:
 # -- if true, will deploy the jobs service
 deploy_jobs: true
+# -- if true, will deploy the prometheus service as a sidecar in the API pod
+enable_prometheus: true
 
 # -- port to expose NodePort services on
 ports:

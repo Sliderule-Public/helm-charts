@@ -3,7 +3,7 @@ entries:
   shieldrule:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-04-10T08:51:26.775485-05:00"
+    created: "2023-04-16T09:32:01.113013-05:00"
     description: A Helm chart for Kubernetes
     digest: 1c8f9fe9fce8eb7c954d39aab3b761cc89ada8cea64ebf125968754e2e55e3c5
     name: shieldrule
@@ -14,9 +14,9 @@ entries:
   sliderule-aws:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-04-10T08:51:26.775815-05:00"
+    created: "2023-04-16T09:32:01.113365-05:00"
     description: The AWS version of the sliderule application
-    digest: 3a888c70205289c3e11bfc6721eefaafdb8fb66595d2f47a672f4230e6d60301
+    digest: b15ad90da3912e8a0bd02770eec074a81f300688fbca6035af8a18bf9810b646
     name: sliderule-aws
     type: application
     urls:
@@ -25,7 +25,17 @@ entries:
   sliderule-base:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-04-10T08:51:26.776134-05:00"
+    created: "2023-04-16T09:32:01.114332-05:00"
+    description: The base version of the sliderule application
+    digest: ca062c90695d18fa8033c063593f5367ce4df59a8199b86e8dd0bc0524f1f262
+    name: sliderule-base
+    type: application
+    urls:
+    - packages/sliderule-base-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-04-16T09:32:01.113958-05:00"
     description: The base version of the sliderule application
     digest: 1d738f709df45fa13ce628f680748896d8f78d9b5bef0aadebd133e634406715
     name: sliderule-base
@@ -36,7 +46,7 @@ entries:
   sliderule-gcp:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-04-10T08:51:26.776243-05:00"
+    created: "2023-04-16T09:32:01.114635-05:00"
     description: The GCP version of the sliderule application
     digest: 77030ffb7cbe2f1cb9ddbc095ca94b881cf1c9d08976d72f882ac0c9f4ca6170
     name: sliderule-gcp
@@ -47,12 +57,12 @@ entries:
   sliderule_demo:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-04-10T08:51:26.777485-05:00"
+    created: "2023-04-16T09:32:01.115967-05:00"
     description: A self-sustained demo of the sliderule application
-    digest: 914f3d8d424776bdbb48a696cac5e5b1c36c5ba61d7bfc0114aa778cd3498628
+    digest: 1c613e8e63457526722c3a1f6d92d20e6cba54514d0b7fd30452c62665e3f353
     name: sliderule_demo
     type: application
     urls:
     - packages/sliderule_demo-0.1.7.tgz
     version: 0.1.7
-generated: "2023-04-10T08:51:26.774756-05:00"
+generated: "2023-04-16T09:32:01.112129-05:00"

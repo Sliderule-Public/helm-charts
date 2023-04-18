@@ -4,4 +4,4 @@ metadata:
   name: managed-cert
 spec:
   domains:
-    - web-gcp.shieldrule.com
+    - web-gcp.usemodernlogic.com

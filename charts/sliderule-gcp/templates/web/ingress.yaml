@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: shieldrule-web-ingress
   annotations:
-    networking.gke.io/managed-certificates: managed-cert
+    networking.gke.io/managed-certificates: shieldrule-cert
     kubernetes.io/ingress.regional-static-ip-name: shieldrule-web
     kubernetes.io/ingress.class: "gce"
 spec:

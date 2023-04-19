@@ -69,10 +69,6 @@ POSTGRES_HOST:
 POSTGRES_PORT: 5432
 # -- Name of postgresql DB to use
 POSTGRES_DB: sliderule
-# -- DB user
-POSTGRES_USER:
-# -- DB password
-POSTGRES_PASSWORD:
 # -- Get from us
 AUDIENCE_URL:
 # -- Get from us
@@ -93,8 +89,6 @@ METRICS_NAMESPACE:
 SLACK_REDIRECT_URI:
 # -- ENVIRONMENT from the Terraform stack
 SHIELDRULE_ENVIRONMENT:
-# -- Get from us
-PROMETHEUS_ACCESS_TOKEN:
 # -- Get from us
 EMAIL_USER_TOKEN:
 # -- Get from us

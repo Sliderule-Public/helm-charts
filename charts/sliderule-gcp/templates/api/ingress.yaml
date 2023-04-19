@@ -8,13 +8,13 @@ metadata:
     kubernetes.io/ingress.class: "gce"
 spec:
   rules:
-    - host:  {{ .Values.web_url }}
+    - host: {{ .Values.api_url}}
       http:
         paths:
           - pathType: Prefix
             path: "/"
             backend:
               service:
-                name: shieldrule-web-service
+                name: shieldrule-api-service
                 port:
                   number: 8000

@@ -4,4 +4,5 @@ metadata:
   name: shieldrule-cert
 spec:
   domains:
-    - web-gcp.usemodernlogic.com
+    - {{ .Values.api_url }}
+    - {{ .Values.web_url }}

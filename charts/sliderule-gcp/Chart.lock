@@ -1,6 +1,6 @@
 dependencies:
 - name: sliderule-base
   repository: https://sliderule-public.github.io/helm-charts
-  version: 0.2.0
-digest: sha256:f7e40186bff8e8a8a0781b31a98a9315b067204f92d9e998bd7444431343eeff
-generated: "2023-04-16T09:37:38.727565-05:00"
+  version: 0.3.0
+digest: sha256:0cab5fafe4059561b6691b5cf04de86862f94b42cf13d66bebf3f13ed6d036b0
+generated: "2023-04-23T08:48:52.908665-05:00"

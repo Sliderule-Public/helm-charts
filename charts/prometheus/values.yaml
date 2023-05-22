@@ -1,0 +1,11 @@
+target_group_arn: ""
+alb_sg_id: ""
+
+prometheus:
+  forceNamespace: "prometheus"
+  alertmanager:
+    persistentVolume:
+      enabled: false
+  server:
+    persistentVolume:
+      enabled: false

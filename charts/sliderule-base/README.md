@@ -4,6 +4,8 @@
 
 A Helm chart for Kubernetes
 
+6-23: removed PSP: https://sysdig.com/blog/kubernetes-1-25-whats-new/
+
 ## Values
 
 | Key | Type | Default | Description |

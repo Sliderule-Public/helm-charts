@@ -35,6 +35,7 @@ web:
   # -- number of web pods to deploy
   count: 2
   labels:
+    foo: bar!
   service:
     nodePort: 31255
     name: web

@@ -34,6 +34,12 @@ ports:
 web:
   # -- number of web pods to deploy
   count: 2
+  service:
+    nodePort: 31255
+    name: web
+    protocol: TCP
+    port: 8000
+    targetPort: 8000
   resources:
     requests:
       # -- memory request for each web pod
@@ -50,6 +56,12 @@ web:
 api:
   # -- number of API pods to deploy
   count: 2
+  service:
+    nodePort: 31257
+    name: api
+    protocol: TCP
+    port: 8000
+    targetPort: 8000
   resources:
     requests:
       # -- memory request for each API pod

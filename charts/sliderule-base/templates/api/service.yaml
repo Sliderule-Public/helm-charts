@@ -7,10 +7,11 @@ spec:
   selector:
     app: shieldrule-api
   ports:
-    - port: 8000
-      targetPort: 8000
-      nodePort: {{ .Values.ports.api }}
-      name: api
+    - name: {{ .Values.api.service.nodePort }}
+      port: {{ .Values.api.service.nodePort }}
+      targetPort: {{ .Values.api.service.nodePort }}
+      nodePort: {{ .Values.api.service.nodePort }}
+      protocol: {{ .Values.api.service.protocol }}
     - port: 9520
       targetPort: 9520
       name: grpc

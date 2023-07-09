@@ -7,9 +7,9 @@ spec:
   selector:
     app: shieldrule-api
   ports:
-    - name: {{ .Values.api.service.nodePort }}
-      port: {{ .Values.api.service.nodePort }}
-      targetPort: {{ .Values.api.service.nodePort }}
+    - name: {{ .Values.api.service.name }}
+      port: {{ .Values.api.service.port }}
+      targetPort: {{ .Values.api.service.targetPort }}
       nodePort: {{ .Values.api.service.nodePort }}
       protocol: {{ .Values.api.service.protocol }}
     - port: 9520

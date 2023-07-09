@@ -11,8 +11,8 @@ spec:
   selector:
     app: shieldrule-web
   ports:
-    - name: {{ .Values.web.service.nodePort }}
-      port: {{ .Values.web.service.nodePort }}
-      targetPort: {{ .Values.web.service.nodePort }}
+    - name: {{ .Values.web.service.name }}
+      port: {{ .Values.web.service.port }}
+      targetPort: {{ .Values.web.service.targetPort }}
       nodePort: {{ .Values.web.service.nodePort }}
       protocol: {{ .Values.web.service.protocol }}

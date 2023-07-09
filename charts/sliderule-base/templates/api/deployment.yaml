@@ -15,7 +15,7 @@ spec:
       labels:
         app: shieldrule-api
         role: shieldrule-api-role
-        {{- with .api.labels }}
+        {{- with .Values.api.labels }}
         {{ toYaml . | indent 8 }}
         {{- end }}
     spec:

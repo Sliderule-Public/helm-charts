@@ -15,7 +15,7 @@ spec:
       labels:
         app: shieldrule-web
         role: shieldrule-web-role
-        {{- with .web.labels }}
+        {{- with .Values.web.labels }}
         {{ toYaml . | indent 8 }}
         {{- end }}
     spec:

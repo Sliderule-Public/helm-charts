@@ -15,6 +15,9 @@ spec:
       labels:
         app: shieldrule-api
         role: shieldrule-api-role
+        {{- with .labels }}
+        {{ toYaml . | indent 8 }}
+        {{- end }}
     spec:
       {{ if .Values.service_account_role }}
       serviceAccountName: tasks

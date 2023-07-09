@@ -15,6 +15,9 @@ spec:
       labels:
         app: shieldrule-web
         role: shieldrule-web-role
+        {{- with .labels }}
+        {{ toYaml . | indent 8 }}
+        {{- end }}
     spec:
       {{ if .Values.service_account_role }}
       serviceAccountName: aws-role

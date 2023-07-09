@@ -16,7 +16,7 @@ spec:
         app: shieldrule-web
         role: shieldrule-web-role
         {{- with .Values.web.labels }}
-        {{ toYaml . | indent 8 }}
+        {{ toYaml . | indent 12 }}
         {{- end }}
     spec:
       {{ if .Values.service_account_role }}

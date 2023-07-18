@@ -6,5 +6,5 @@ type: application
 version: 0.4.8
 dependencies:
   - name: sliderule-base
-    version: 0.4.8
+    version: 0.4.9
     repository: https://sliderule-public.github.io/helm-charts

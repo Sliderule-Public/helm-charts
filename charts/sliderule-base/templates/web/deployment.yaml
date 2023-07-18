@@ -15,8 +15,8 @@ spec:
       labels:
         app: shieldrule-web
         role: shieldrule-web-role
-        {{- with .Values.web.labels }}
-        {{ toYaml . }}
+        {{- range $k, $v := .Values.web.labels }}
+        {{ $k }}: {{ $v }}
         {{- end }}
     spec:
       {{ if .Values.service_account_role }}

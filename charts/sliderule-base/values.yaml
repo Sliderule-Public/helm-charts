@@ -35,7 +35,7 @@ web:
   # -- number of web pods to deploy
   count: 2
   labels:
-    foo: bar
+#    foo: bar
   service:
     nodePort: 31255
     name: web
@@ -59,8 +59,8 @@ api:
   # -- number of API pods to deploy
   count: 2
   labels:
-    foo: bar
-    lorem: ipsum
+#    foo: bar
+#    lorem: ipsum
   service:
     nodePort: 31257
     name: api

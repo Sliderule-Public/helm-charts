@@ -29,7 +29,7 @@ spec:
       initContainers:
         - name: volume-mount-hack
           imagePullPolicy: Always
-          image: "{{ .Values.web_image_url }}:{{ .Values.SHIELDRULE_ENVIRONMENT }}"
+          image: "{{ .Values.web_image_url }}"
           command: [ "sh", "-c", "cp -r /usr/share/nginx/html/* /usr/share/nginx/html_rw/ && cp ./nginx.eks.conf /etc/nginx/conf.d/default.conf" ]
           volumeMounts:
             - mountPath: /usr/share/nginx/html_rw
@@ -37,7 +37,7 @@ spec:
             - mountPath: /etc/nginx/conf.d/
               name: shieldrule-web-nginx-config
       containers:
-        - image: "{{ .Values.web_image_url }}:{{ .Values.SHIELDRULE_ENVIRONMENT }}"
+        - image: "{{ .Values.web_image_url }}"
           imagePullPolicy: Always
           command: [ "/bin/sh", "-c", "./load-env.sh /usr/share/nginx/html_rw/config.js && nginx -g \"daemon off;\"" ]
           name: shieldrule-web

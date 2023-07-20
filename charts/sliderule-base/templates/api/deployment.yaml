@@ -24,7 +24,7 @@ spec:
       {{ end }}
       terminationGracePeriodSeconds: 300
       containers:
-        - image: "{{ .Values.api_image_url }}:{{ .Values.SHIELDRULE_ENVIRONMENT }}"
+        - image: "{{ .Values.api_image_url }}"
           imagePullPolicy: Always
           name: shieldrule-api
           ports:
@@ -72,7 +72,7 @@ spec:
             limits:
               memory: 256Mi
               cpu: 128m
-          image: "{{ .Values.prometheus_image_url }}:{{ .Values.SHIELDRULE_ENVIRONMENT }}"
+          image: "{{ .Values.prometheus_image_url }}"
           env:
             - name: SHIELDRULE_ENVIRONMENT
               value: {{ .Values.SHIELDRULE_ENVIRONMENT | quote }}

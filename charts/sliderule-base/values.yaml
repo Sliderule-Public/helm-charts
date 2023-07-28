@@ -58,6 +58,7 @@ web:
 api:
   # -- number of API pods to deploy
   count: 2
+  # If true, will create the api-secret secret needed for the API service. If false, api-secret needs to be created with whatever your secret management solution is.
   add_secret: false
   labels:
 #    foo: bar

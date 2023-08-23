@@ -51,10 +51,10 @@ spec:
               memory: {{ .Values.api.resources.limits.memory }}
               cpu: {{ .Values.api.resources.limits.cpu }}
           envFrom:
+            {{- range .Values.api.secrets }}
             - secretRef:
-                name: terraform-secret
-            - secretRef:
-                name: sliderule-secret
+                name: {{ . }}
+            {{- end }}
           volumeMounts:
             - mountPath: /tmp
               name: shieldrule-api-tmpfs

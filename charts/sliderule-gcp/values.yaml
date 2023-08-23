@@ -1,3 +1,76 @@
+# Used to set the managed cert and ingress for the web service
 web_url:
-
+# Used to set the managed cert and ingress for the api service
 api_url:
+
+sliderule-base:
+  # -- URL of web image
+  web_image_url:
+  # -- URL of api image
+  api_image_url:
+  # -- URL of prometheus image
+  prometheus_image_url:
+  # -- if true, will deploy the jobs service
+  deploy_jobs: true
+  # -- if true, will deploy the prometheus service as a sidecar in the API pod
+  enable_prometheus: true
+
+  # -- port to expose NodePort services on
+  ports:
+    web: 31255
+    api: 31257
+    grpc: 31258
+    jobs: 31259
+
+  # -- default resources for the web service
+  web:
+    # -- number of web pods to deploy
+    count: 2
+    labels:
+    #    foo: bar
+    secrets: []
+    service:
+      nodePort: 31255
+      name: web
+      protocol: TCP
+      port: 8000
+      targetPort: 8000
+    resources:
+      requests:
+        # -- memory request for each web pod
+        memory: "1024Mi"
+        # -- cpu request for each web pod
+        cpu: "512m"
+      limits:
+        # -- memory limit for each web pod
+        memory: "1024Mi"
+        # -- cpu limit for each web pod
+        cpu: "512m"
+
+  # -- default resources for the API service
+  api:
+    # -- number of API pods to deploy
+    count: 2
+    # If true, will create the api-secret secret needed for the API service. If false, api-secret needs to be created with whatever your secret management solution is.
+    add_secret: false
+    labels:
+    #    foo: bar
+    #    lorem: ipsum
+    secrets: []
+    service:
+      nodePort: 31257
+      name: api
+      protocol: TCP
+      port: 8000
+      targetPort: 8000
+    resources:
+      requests:
+        # -- memory request for each API pod
+        memory: "14500Mi"
+        # -- cpu request for each API pod
+        cpu: "3400m"
+      limits:
+        # -- memory limit for each API pod
+        memory: "14500Mi"
+        # -- cpu limit for each API pod
+        cpu: "3400m"

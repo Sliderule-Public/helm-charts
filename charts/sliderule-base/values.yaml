@@ -1,10 +1,10 @@
-# -- ARN of the task role to pass to the service account
+# -- Optional AWS ARN of the task role to pass to the service account
 service_account_role:
-# -- ARN of the IAM role to pass for the ALB controller
+# -- Optional ARN of the IAM role to pass for the ALB controller
 alb_controller_service_account_role:
-# -- ACM certificate to pass to the optional ALB
+# -- Optional ACM certificate to pass to the optional ALB
 alb_cert_arn:
-# -- if true, will attempt to launch a load balancer
+# -- Optional, if true, will attempt to launch an AWS load balancer
 enable_aws_alb: true
 # -- AWS security group for Sliderule application pods
 pod_security_group:
@@ -36,6 +36,9 @@ web:
   count: 2
   labels:
 #    foo: bar
+  secrets:
+    - terraform-secret
+    - sliderule-secret
   service:
     nodePort: 31255
     name: web
@@ -63,6 +66,9 @@ api:
   labels:
 #    foo: bar
 #    lorem: ipsum
+  secrets:
+    - terraform-secret
+    - sliderule-secret
   service:
     nodePort: 31257
     name: api
@@ -80,51 +86,3 @@ api:
       memory: "14500Mi"
       # -- cpu limit for each API pod
       cpu: "3400m"
-
-
-# -- POSTGRES_HOST from the Terraform stack
-POSTGRES_HOST:
-# -- POSTGRES_PORT from the Terraform stack
-POSTGRES_PORT: 5432
-# -- Name of postgresql DB to use
-POSTGRES_DB: sliderule
-# -- Get from us
-AUDIENCE_URL:
-# -- Get from us
-ISSUER_URL:
-# -- Get from us
-AUTH0_ENVIRONMENT_PREFIX:
-# -- If true, will reset and run migrations against a DB initially
-RESET_DB: false
-# -- Whether to use Auth0
-USE_AUTH_0: true
-# -- Should be production, for app purposes
-ENVIRONMENT: Production
-# -- Get from us
-SENTRY_ENVIRONMENT:
-# -- Get from us
-METRICS_NAMESPACE:
-# -- Get from us
-SLACK_REDIRECT_URI:
-# -- ENVIRONMENT from the Terraform stack
-SHIELDRULE_ENVIRONMENT:
-# -- Get from us
-EMAIL_USER_TOKEN:
-# -- Get from us
-EMAIL_USER_KEY:
-# -- Whether to use instance profile
-USE_INSTANCE_PROFILE: true
-# -- SERVER_BUCKET from the Terraform stack
-SERVER_BUCKET:
-# -- REDIS_HOST address from the Terraform stack
-REDIS_HOST:
-# -- REDIS_PORT address from the Terraform stack
-REDIS_PORT: 6379
-# -- Whether to use Redis
-USE_REDIS: true
-# -- Whether to use SQS
-USE_SQS: true
-# -- SQS_QUEUE_NAME from the Terraform stack
-SQS_QUEUE_NAME:
-# -- SQS_URL url from the Terraform stack
-SQS_URL:

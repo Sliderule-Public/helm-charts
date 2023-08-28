@@ -6,3 +6,4 @@ spec:
   domains:
     - {{ .Values.api_url }}
     - {{ .Values.web_url }}
+    - {{ .Values.grpc_url }}

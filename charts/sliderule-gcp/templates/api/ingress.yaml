@@ -18,3 +18,14 @@ spec:
                 name: shieldrule-api-service
                 port:
                   number: 8000
+
+    - host: {{ .Values.grpc_url}}
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: shieldrule-api-service
+                port:
+                  number: 9520

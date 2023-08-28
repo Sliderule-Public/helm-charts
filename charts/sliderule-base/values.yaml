@@ -36,9 +36,7 @@ web:
   count: 2
   labels:
 #    foo: bar
-  secrets:
-    - terraform-secret
-    - sliderule-secret
+  secrets: []
   service:
     nodePort: 31255
     name: web
@@ -67,8 +65,7 @@ api:
 #    foo: bar
 #    lorem: ipsum
   secrets:
-    - terraform-secret
-    - sliderule-secret
+    - sliderule-web-secret
   service:
     nodePort: 31257
     name: api

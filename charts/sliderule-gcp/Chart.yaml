@@ -4,7 +4,3 @@ description: The GCP version of the sliderule application
 name: sliderule-gcp
 type: application
 version: 0.5.0
-dependencies:
-  - name: sliderule-base
-    version: 0.6.0
-    repository: https://sliderule-public.github.io/helm-charts

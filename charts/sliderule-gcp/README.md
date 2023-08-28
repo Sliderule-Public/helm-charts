@@ -1,4 +1,4 @@
-This helm chart expects one kubernetes secret to be passed to the helm chart. The secret should contain the following keys:
+This helm chart expects a web secret and api secret to be passed to the helm chart. The api secret should contain the following keys:
 
 ```
 POSTGRES_USER
@@ -26,7 +26,28 @@ PUB_SUB_TOPIC_ID
 SHIELDRULE_ENVIRONMENT
 ```
 
-The secret can be named anything, as long as it's in the same namespace as the helm chart installation and is passed to `.Values.api.secrets` and `.Values.web.secrets` in the `values.yaml` file.
+The web secret should contain the following keys:
+```
+API_URL
+GRPC_ENDPOINT
+AUTH_AUDIENCE
+AUTH_CLIENT_ID
+AUTH_DOMAIN
+AUTH0_ENABLED
+OKTA_ENABLED
+SAML_ENABLED
+SENTRY_ENABLED
+HOTJAR_ENABLED
+HEAP_ENABLED
+USERFLOW_ENABLED
+USERFLOW_KEY
+ENVIRONMENT
+SHIELDRULE_ENVIRONMENT
+DB_NAME
+LAUNCHDARKLY_CLIENT_ID
+```
+
+The secrets can be named anything, as long as they're in the same namespace as the helm chart installation and are passed to `.Values.api.secrets` and `.Values.web.secrets` in the `values.yaml` file.
 
 The optional `prerequisites-gcp` helm chart installs the External Secrets operator, which can optionally be used to sync secrets from GCP Secret Manager.
 The optional `sliderule-secrets` helm chart installs a secret using External Secrets to manage a secret named `sliderule-secret` for you.

@@ -52,7 +52,8 @@ spec:
               cpu: {{ .Values.api.resources.limits.cpu }}
           env:
             {{- range $k, $v := .Values.api.env_vars }}
-            {{ $k }}: {{ $v }}
+            - name: {{ $k }}
+              value: {{ $v }}
             {{- end }}
           envFrom:
             {{- range .Values.api.secrets }}

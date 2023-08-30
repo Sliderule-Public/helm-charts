@@ -76,7 +76,8 @@ spec:
               name: shieldrule-web-nginx-config
           env:
             {{- range $k, $v := .Values.web.env_vars }}
-            {{ $k }}: {{ $v }}
+            - name: {{ $k }}
+              value: {{ $v }}
             {{- end }}
           envFrom:
             {{- range .Values.web.secrets }}

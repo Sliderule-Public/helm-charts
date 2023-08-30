@@ -50,6 +50,10 @@ spec:
             limits:
               memory: {{ .Values.api.resources.limits.memory }}
               cpu: {{ .Values.api.resources.limits.cpu }}
+          env:
+            {{- range $k, $v := .Values.api.env_vars }}
+            {{ $k }}: {{ $v }}
+            {{- end }}
           envFrom:
             {{- range .Values.api.secrets }}
             - secretRef:

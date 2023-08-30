@@ -36,7 +36,8 @@ web:
   count: 2
   labels:
 #    foo: bar
-  secrets: []
+  secrets: [] # list of K8S secret names to pass to the container
+  env_vars: {} # key value pairs to get injected into the container
   service:
     nodePort: 31255
     name: web
@@ -64,7 +65,8 @@ api:
   labels:
 #    foo: bar
 #    lorem: ipsum
-  secrets: []
+  secrets: [] # list of K8S secret names to pass to the container
+  env_vars: {} # key value pairs to get injected into the container
   service:
     nodePort: 31257
     name: api

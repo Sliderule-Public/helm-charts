@@ -77,7 +77,7 @@ spec:
           env:
             {{- range $k, $v := .Values.web.env_vars }}
             - name: {{ $k }}
-              value: {{ $v }}
+              value: {{ $v | quote }}
             {{- end }}
           envFrom:
             {{- range .Values.web.secrets }}

@@ -64,8 +64,7 @@ api:
   labels:
 #    foo: bar
 #    lorem: ipsum
-  secrets:
-    - sliderule-web-secret
+  secrets: []
   service:
     nodePort: 31257
     name: api

@@ -1,5 +1,7 @@
 # -- Optional AWS ARN of the task role to pass to the service account
-service_account_role:
+aws_service_account_iam_role:
+# -- Optional name of a service account to create for API tasks
+api_service_account_name:
 # -- Optional ARN of the IAM role to pass for the ALB controller
 alb_controller_service_account_role:
 # -- Optional ACM certificate to pass to the optional ALB

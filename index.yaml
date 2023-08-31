@@ -3,13 +3,13 @@ entries:
   prerequisites-gcp:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.877402-05:00"
+    created: "2023-08-31T14:41:04.220048-05:00"
     dependencies:
     - name: external-secrets
       repository: https://charts.external-secrets.io
       version: 0.8.1
     description: Prerequisites for the GCP Sliderule application
-    digest: 2c7a6fef66ba44e33e6a6d8b10db8ea0d79042ef013b23253652ed56984a477a
+    digest: 6a5c237ef83a855917c8913b55a17035592f005552ba605e1b58ac27d8b7ad92
     name: prerequisites-gcp
     type: application
     urls:
@@ -17,7 +17,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.874684-05:00"
+    created: "2023-08-31T14:41:04.218086-05:00"
     dependencies:
     - name: external-secrets
       repository: https://charts.external-secrets.io
@@ -31,7 +31,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.872674-05:00"
+    created: "2023-08-31T14:41:04.215708-05:00"
     dependencies:
     - name: external-secrets
       repository: https://charts.external-secrets.io
@@ -46,7 +46,7 @@ entries:
   prometheus:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-31T14:40:11.881009-05:00"
+    created: "2023-08-31T14:41:04.223372-05:00"
     description: A Helm chart for Kubernetes
     digest: 9d7729b7bb3047348e125dbe7c7cd950121671bd23e1535214ae6ee3c41c01ce
     name: prometheus
@@ -57,7 +57,7 @@ entries:
   shieldrule:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-31T14:40:11.88155-05:00"
+    created: "2023-08-31T14:41:04.223799-05:00"
     description: A Helm chart for Kubernetes
     digest: 1c8f9fe9fce8eb7c954d39aab3b761cc89ada8cea64ebf125968754e2e55e3c5
     name: shieldrule
@@ -68,9 +68,9 @@ entries:
   sliderule-aws:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.881827-05:00"
+    created: "2023-08-31T14:41:04.224112-05:00"
     description: The AWS version of the sliderule application
-    digest: 18972fe3995d80e86abf5f3ea4a6d98ce5263ea40ead24508ba69e3866387af1
+    digest: f0b0829c253c4d1b89d995b205fafa5bd0fd2bf052fed40e1662c8217b78aad4
     name: sliderule-aws
     type: application
     urls:
@@ -79,7 +79,17 @@ entries:
   sliderule-base:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.893624-05:00"
+    created: "2023-08-31T14:41:04.232008-05:00"
+    description: The base version of the sliderule application
+    digest: 68f7c882b5b0370859d25985c932d418f5caf5ee90b21773cc70292da1ce924c
+    name: sliderule-base
+    type: application
+    urls:
+    - packages/sliderule-base-0.8.3.tgz
+    version: 0.8.3
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-08-31T14:41:04.231735-05:00"
     description: The base version of the sliderule application
     digest: 78a86e2f67c4d18215904929d6c44fcd5f27bdaa712c56c7e4e04efd7760bce6
     name: sliderule-base
@@ -89,7 +99,7 @@ entries:
     version: 0.8.2
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.893353-05:00"
+    created: "2023-08-31T14:41:04.231462-05:00"
     description: The base version of the sliderule application
     digest: 42b7181cfe3fc079c304689fd96ec9577a8220ffe4371c1d01713352e43fd4d3
     name: sliderule-base
@@ -99,7 +109,7 @@ entries:
     version: 0.8.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.892932-05:00"
+    created: "2023-08-31T14:41:04.231208-05:00"
     description: The base version of the sliderule application
     digest: e9d98ccce29ddf9350ec077fb2d4e861ba03e4f0bb9e5a7ca500294a502cf0b1
     name: sliderule-base
@@ -109,7 +119,7 @@ entries:
     version: 0.8.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.892558-05:00"
+    created: "2023-08-31T14:41:04.230941-05:00"
     description: The base version of the sliderule application
     digest: 96d6649fbd84eab3cee2f39d33d2edb7e8f9c611ea8e075be0e9bf07fef056e9
     name: sliderule-base
@@ -119,7 +129,7 @@ entries:
     version: 0.7.4
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.89219-05:00"
+    created: "2023-08-31T14:41:04.230685-05:00"
     description: The base version of the sliderule application
     digest: e08bccdb312d35f617d5b0a82ca4b680b1bbff34c63ddc66df83dcfceb570063
     name: sliderule-base
@@ -129,7 +139,7 @@ entries:
     version: 0.7.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.891848-05:00"
+    created: "2023-08-31T14:41:04.230429-05:00"
     description: The base version of the sliderule application
     digest: 38f2e740f75b415121b84a3f81272cc71ad1286ef0f9025a023b85554c82732e
     name: sliderule-base
@@ -139,7 +149,7 @@ entries:
     version: 0.7.2
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.891555-05:00"
+    created: "2023-08-31T14:41:04.230154-05:00"
     description: The base version of the sliderule application
     digest: edc28605570951c1449e2f0b6d0531a84f977b5acd14bcc78823f7a77e228be3
     name: sliderule-base
@@ -149,7 +159,7 @@ entries:
     version: 0.7.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.89115-05:00"
+    created: "2023-08-31T14:41:04.229898-05:00"
     description: The base version of the sliderule application
     digest: 12a9ba63f4995c75c20fae22fc26a4f20745766d23b7abb098f3edcd2f663298
     name: sliderule-base
@@ -159,7 +169,7 @@ entries:
     version: 0.7.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.89074-05:00"
+    created: "2023-08-31T14:41:04.229632-05:00"
     description: The base version of the sliderule application
     digest: 10eea7e503c62d7e0c325f7f46d1bdff53ccbee150c8326c733356cca7f4893b
     name: sliderule-base
@@ -169,7 +179,7 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.890327-05:00"
+    created: "2023-08-31T14:41:04.229361-05:00"
     description: The base version of the sliderule application
     digest: ba76c996845dfbd6767a2b8cba7fc3517bafdefa80ecacfd56924a82dbf2ffcf
     name: sliderule-base
@@ -179,7 +189,7 @@ entries:
     version: 0.5.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.889866-05:00"
+    created: "2023-08-31T14:41:04.229053-05:00"
     description: The base version of the sliderule application
     digest: aa488eae565adababa3c1d16ed40144b503100b734e302bddff56460d6cc5912
     name: sliderule-base
@@ -189,7 +199,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.88941-05:00"
+    created: "2023-08-31T14:41:04.228729-05:00"
     description: The base version of the sliderule application
     digest: e620332e56711e69a3f951b558a9388ffc102aa2b212ff8301040d1141beface
     name: sliderule-base
@@ -199,7 +209,7 @@ entries:
     version: 0.4.9
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.888951-05:00"
+    created: "2023-08-31T14:41:04.228352-05:00"
     description: The base version of the sliderule application
     digest: 3944b0c99e46fd82c577142da9f30c8fb78cd3488b3e5390ea04854f8a11438b
     name: sliderule-base
@@ -209,7 +219,7 @@ entries:
     version: 0.4.8
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.888425-05:00"
+    created: "2023-08-31T14:41:04.227611-05:00"
     description: The base version of the sliderule application
     digest: b4b80a8a95835ae211a7d3e5cc4685839ec596043959f2bdb23c776e06b1cebe
     name: sliderule-base
@@ -219,7 +229,7 @@ entries:
     version: 0.4.7
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.887061-05:00"
+    created: "2023-08-31T14:41:04.227328-05:00"
     description: The base version of the sliderule application
     digest: 8998671852de9ad3d71c02c4b8c08e51151c37905e0f0897c495e6ea992bef32
     name: sliderule-base
@@ -229,7 +239,7 @@ entries:
     version: 0.4.6
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.886621-05:00"
+    created: "2023-08-31T14:41:04.227036-05:00"
     description: The base version of the sliderule application
     digest: d78bf5478286b9b671461be04ff6f92151a27656e33bdcac82c87a729cd2fa04
     name: sliderule-base
@@ -239,7 +249,7 @@ entries:
     version: 0.4.5
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.886182-05:00"
+    created: "2023-08-31T14:41:04.226749-05:00"
     description: The base version of the sliderule application
     digest: 1380513afd1e99afe005e7497c7791d7f85250da79c9292a9df688a3188d53a6
     name: sliderule-base
@@ -249,7 +259,7 @@ entries:
     version: 0.4.4
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.885605-05:00"
+    created: "2023-08-31T14:41:04.226476-05:00"
     description: The base version of the sliderule application
     digest: b26ec1a3591b9b6017c150a4f34766ae8c291740c093c75b7ee291c74d869b4f
     name: sliderule-base
@@ -259,7 +269,7 @@ entries:
     version: 0.4.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.885067-05:00"
+    created: "2023-08-31T14:41:04.226197-05:00"
     description: The base version of the sliderule application
     digest: 477cbf06a644c460b127886afedacda0a0321fa1f769bdf567e6742771201d7e
     name: sliderule-base
@@ -269,7 +279,7 @@ entries:
     version: 0.4.2
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.884616-05:00"
+    created: "2023-08-31T14:41:04.225897-05:00"
     description: The base version of the sliderule application
     digest: e341bdd7bd293448c67bff717e8e14198581d833001ad2d5f07d044355303e20
     name: sliderule-base
@@ -279,7 +289,7 @@ entries:
     version: 0.4.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.884181-05:00"
+    created: "2023-08-31T14:41:04.225607-05:00"
     description: The base version of the sliderule application
     digest: 34564089bd3e52d1768c58adcbb196a00468da2ab21198d98daaad451be3c6e7
     name: sliderule-base
@@ -289,7 +299,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.883738-05:00"
+    created: "2023-08-31T14:41:04.225313-05:00"
     description: The base version of the sliderule application
     digest: 8100c06804011ebe9d4115971b1b96233e9610ef3f4772a214940c2c6d9bceae
     name: sliderule-base
@@ -299,7 +309,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.883277-05:00"
+    created: "2023-08-31T14:41:04.225029-05:00"
     description: The base version of the sliderule application
     digest: 2bb299900649542b2e4461e50971b743eaee2ed4281cccff7de3cce7b5dbf1d3
     name: sliderule-base
@@ -309,7 +319,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.882806-05:00"
+    created: "2023-08-31T14:41:04.224728-05:00"
     description: The base version of the sliderule application
     digest: c81d8e741cc8dc69b42bba820f6bbc0e7f498c1730599b1f420202f373fe4a86
     name: sliderule-base
@@ -319,7 +329,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.882314-05:00"
+    created: "2023-08-31T14:41:04.224433-05:00"
     description: The base version of the sliderule application
     digest: 1d738f709df45fa13ce628f680748896d8f78d9b5bef0aadebd133e634406715
     name: sliderule-base
@@ -330,9 +340,9 @@ entries:
   sliderule-gcp:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.90735-05:00"
+    created: "2023-08-31T14:41:04.24197-05:00"
     description: The GCP version of the sliderule application
-    digest: deb30f526a4f6c5405424c62f5d3e5b1c12459d6805df9455e0f82dd3f9df296
+    digest: 12980ecc8817adf34e86384d1542c529d27ade2f7be8bbd3c9d6957111432e0e
     name: sliderule-gcp
     type: application
     urls:
@@ -340,7 +350,7 @@ entries:
     version: 0.5.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.907222-05:00"
+    created: "2023-08-31T14:41:04.241835-05:00"
     description: The GCP version of the sliderule application
     digest: da7abd6ab73c759c3f697f26f2e8ff81daed9bc2865cc620f5ff2742afe76068
     name: sliderule-gcp
@@ -350,7 +360,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.906906-05:00"
+    created: "2023-08-31T14:41:04.241693-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -364,7 +374,7 @@ entries:
     version: 0.4.9
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.9064-05:00"
+    created: "2023-08-31T14:41:04.241291-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -378,7 +388,7 @@ entries:
     version: 0.4.8
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.90581-05:00"
+    created: "2023-08-31T14:41:04.240873-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -392,7 +402,7 @@ entries:
     version: 0.4.7
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.905227-05:00"
+    created: "2023-08-31T14:41:04.240435-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -406,7 +416,7 @@ entries:
     version: 0.4.6
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.904518-05:00"
+    created: "2023-08-31T14:41:04.239993-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -420,7 +430,7 @@ entries:
     version: 0.4.5
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.903925-05:00"
+    created: "2023-08-31T14:41:04.239586-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -434,7 +444,7 @@ entries:
     version: 0.4.4
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.903372-05:00"
+    created: "2023-08-31T14:41:04.239142-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -448,7 +458,7 @@ entries:
     version: 0.4.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.902232-05:00"
+    created: "2023-08-31T14:41:04.238247-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -462,7 +472,7 @@ entries:
     version: 0.4.2
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.901671-05:00"
+    created: "2023-08-31T14:41:04.237849-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -476,7 +486,7 @@ entries:
     version: 0.4.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.90099-05:00"
+    created: "2023-08-31T14:41:04.237468-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -490,7 +500,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.900471-05:00"
+    created: "2023-08-31T14:41:04.237095-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -504,7 +514,7 @@ entries:
     version: 0.3.8
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.899905-05:00"
+    created: "2023-08-31T14:41:04.23671-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -518,7 +528,7 @@ entries:
     version: 0.3.7
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.899379-05:00"
+    created: "2023-08-31T14:41:04.236339-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -532,7 +542,7 @@ entries:
     version: 0.3.6
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.898808-05:00"
+    created: "2023-08-31T14:41:04.235916-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -546,7 +556,7 @@ entries:
     version: 0.3.5
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.898216-05:00"
+    created: "2023-08-31T14:41:04.23549-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -560,7 +570,7 @@ entries:
     version: 0.3.4
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.89762-05:00"
+    created: "2023-08-31T14:41:04.23509-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -574,7 +584,7 @@ entries:
     version: 0.3.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.896998-05:00"
+    created: "2023-08-31T14:41:04.23467-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -588,7 +598,7 @@ entries:
     version: 0.3.2
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.896413-05:00"
+    created: "2023-08-31T14:41:04.234258-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -602,7 +612,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.895835-05:00"
+    created: "2023-08-31T14:41:04.233834-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -616,7 +626,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.89501-05:00"
+    created: "2023-08-31T14:41:04.233408-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -630,7 +640,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.894434-05:00"
+    created: "2023-08-31T14:41:04.23298-05:00"
     dependencies:
     - name: sliderule-base
       repository: https://sliderule-public.github.io/helm-charts
@@ -644,7 +654,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.893889-05:00"
+    created: "2023-08-31T14:41:04.232096-05:00"
     description: The GCP version of the sliderule application
     digest: 77030ffb7cbe2f1cb9ddbc095ca94b881cf1c9d08976d72f882ac0c9f4ca6170
     name: sliderule-gcp
@@ -655,9 +665,9 @@ entries:
   sliderule-secrets:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.909032-05:00"
+    created: "2023-08-31T14:41:04.246742-05:00"
     description: Sliderule secrets helm chart
-    digest: a423eb742b38db223112ebbd3facdf2b190a0da682a1768d614f113c683368a8
+    digest: de4ed826e556f98d8007bf726442b310e21d5937455402d7c86bc086a81dfbb4
     name: sliderule-secrets
     type: application
     urls:
@@ -665,7 +675,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.908925-05:00"
+    created: "2023-08-31T14:41:04.246563-05:00"
     description: Sliderule secrets helm chart
     digest: e3bc6392acf1021ff71f54e5ad5580b4378dcadb1fc44760b5d9590eee8e801e
     name: sliderule-secrets
@@ -675,7 +685,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.908758-05:00"
+    created: "2023-08-31T14:41:04.242645-05:00"
     description: Sliderule secrets helm chart
     digest: bc185d18b2159d0aee6e5c5d17491ef366fbf2f29c9f145d44049323e5cc759b
     name: sliderule-secrets
@@ -685,7 +695,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.908541-05:00"
+    created: "2023-08-31T14:41:04.242537-05:00"
     description: Sliderule secrets helm chart
     digest: 52577c0d5f80e28baf332c43bf573dcd748b5466c7cd2502592894a70bad5a89
     name: sliderule-secrets
@@ -695,7 +705,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.908314-05:00"
+    created: "2023-08-31T14:41:04.242418-05:00"
     description: Sliderule secrets helm chart
     digest: 8f9bc4934e49d9d2edff07b7cdc80f60f900edae6f6a5fbc5528bc7754f67aeb
     name: sliderule-secrets
@@ -705,7 +715,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.908085-05:00"
+    created: "2023-08-31T14:41:04.242309-05:00"
     description: Sliderule secrets helm chart
     digest: 08ee487d07e166fad337293d3a39ce89a6f7317e3965db611d65aba41225a962
     name: sliderule-secrets
@@ -715,7 +725,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.907858-05:00"
+    created: "2023-08-31T14:41:04.242195-05:00"
     description: Sliderule secrets helm chart
     digest: 120da4b61f8f7c8f63d0ff18bd3d4618044a12cd68e3aea8a3b6ce2d4afae545
     name: sliderule-secrets
@@ -725,7 +735,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.907634-05:00"
+    created: "2023-08-31T14:41:04.242077-05:00"
     description: Sliderule secrets helm chart
     digest: 8b98eca9be00ceeab6283c57fd1d3202dd6a65d4ae9956e5f98f25f335d34803
     name: sliderule-secrets
@@ -736,12 +746,12 @@ entries:
   sliderule_demo:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-08-31T14:40:11.910655-05:00"
+    created: "2023-08-31T14:41:04.247966-05:00"
     description: A self-sustained demo of the sliderule application
-    digest: 9b6050dfa2f43ed1b5a4fe3d8fee71f4a0520e41c6145185e32f86a8dad823ed
+    digest: 35c5c3c549b6673fd912101e7530a911cde13b2a331b89fe35eec71df4ca7166
     name: sliderule_demo
     type: application
     urls:
     - packages/sliderule_demo-0.1.7.tgz
     version: 0.1.7
-generated: "2023-08-31T14:40:11.870459-05:00"
+generated: "2023-08-31T14:41:04.213852-05:00"

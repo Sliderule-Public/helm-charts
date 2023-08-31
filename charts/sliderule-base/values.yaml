@@ -70,10 +70,10 @@ api:
   secrets: [] # list of K8S secret names to pass to the container
   env_vars: {} # key value pairs to get injected into the container
   file_mounts:
-#    - name: api-secret
-#      config_map_name: api-secret
-#      mount_path: /etc/sliderule/api-secret
-#      file_name: api-secret
+#    - name: # name of the file mount
+#      config_map_name: #name of the config map to mount
+#      mount_path: # path to mount the config map to
+#      file_name: # name of the file to mount
   service:
     nodePort: 31257
     name: api

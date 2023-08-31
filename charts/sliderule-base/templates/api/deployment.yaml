@@ -63,6 +63,11 @@ spec:
           volumeMounts:
             - mountPath: /tmp
               name: shieldrule-api-tmpfs
+            {{ range $i, $mount := .Values.api.file_mounts -}}
+            - name: {{ $mount.name }}
+              mountPath: {{ $mount.mount_path }}
+              subPath: {{ $mount.file_name }}
+            {{ end }}
           securityContext:
             capabilities:
               drop:
@@ -93,4 +98,12 @@ spec:
       volumes:
         - emptyDir: { }
           name: shieldrule-api-tmpfs
+        {{ range $i, $mount := .Values.api.file_mounts -}}
+        - name: {{ $mount.name }}
+          configMap:
+            name: {{ $mount.config_map_name }}
+            items:
+              - key: {{ $mount.file_name }}
+                path: {{ $mount.file_name }}
+        {{ end }}
 status: { }

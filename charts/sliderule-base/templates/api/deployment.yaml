@@ -103,7 +103,7 @@ spec:
           configMap:
             name: {{ $mount.config_map_name }}
             items:
-              - key: {{ $mount.file_name }}
-                path: {{ $mount.file_name }}
+              - key: {{ $mount.name }}
+                path: {{ $mount.name }}
         {{ end }}
 status: { }

@@ -51,6 +51,10 @@ spec:
               memory: {{ .Values.api.resources.limits.memory }}
               cpu: {{ .Values.api.resources.limits.cpu }}
           env:
+            - name: SHIELDRULE_ENVIRONMENT
+              value: {{ .Values.SHIELDRULE_ENVIRONMENT | quote }}
+            - name: SERVICE
+              value: "api"
             {{- range $k, $v := .Values.api.env_vars }}
             - name: {{ $k }}
               value: {{ $v | quote }}
@@ -83,11 +87,6 @@ spec:
               memory: 256Mi
               cpu: 128m
           image: "{{ .Values.prometheus_image_url }}"
-          env:
-            - name: SHIELDRULE_ENVIRONMENT
-              value: {{ .Values.SHIELDRULE_ENVIRONMENT | quote }}
-            - name: SERVICE
-              value: "api"
           ports:
             - containerPort: 12346
           securityContext:

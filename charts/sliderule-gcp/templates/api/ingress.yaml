@@ -18,7 +18,7 @@ spec:
                 name: shieldrule-api-service
                 port:
                   number: 8000
-
+{{ if .Values.grpc_url }}
     - host: {{ .Values.grpc_url}}
       http:
         paths:
@@ -29,3 +29,4 @@ spec:
                 name: shieldrule-api-service
                 port:
                   number: 9520
+{{ end }}

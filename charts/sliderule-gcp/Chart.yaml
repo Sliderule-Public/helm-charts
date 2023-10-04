@@ -3,4 +3,4 @@ appVersion: 1.0.0
 description: The GCP version of the sliderule application
 name: sliderule-gcp
 type: application
-version: 0.5.2
+version: 0.5.3

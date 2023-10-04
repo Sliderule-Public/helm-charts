@@ -6,6 +6,4 @@ spec:
   domains:
     - {{ .Values.api_url }}
     - {{ .Values.web_url }}
-{{ if .Values.grpc_url }}
     - {{ .Values.grpc_url }}
-{{ end }}

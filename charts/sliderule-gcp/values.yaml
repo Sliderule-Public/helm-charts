@@ -4,3 +4,5 @@ web_url:
 api_url:
 # Used to set the managed cert and ingress for the api GRPC service
 grpc_url:
+
+deploy_grpc: true

@@ -33,7 +33,7 @@ spec:
               name: shieldrule-api-tmpfs
             {{ range $i, $mount := .Values.api.file_mounts -}}
             - name: {{ $mount.name }}
-              readOnly: true
+              readOnly: false
               mountPath: {{ $mount.mount_path }}/{{ $mount.file_name }}
             {{ end }}
       containers:

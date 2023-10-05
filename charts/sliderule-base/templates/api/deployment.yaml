@@ -24,7 +24,7 @@ spec:
       {{ end }}
       terminationGracePeriodSeconds: 300
       initContainers:
-        - name: permission_hack
+        - name: permission-hack
           imagePullPolicy: Always
           image: "{{ .Values.api_image_url }}"
           command: [ "sh", "-c", "chmod 600 /opt/shieldrule-api/certs/client-key.der/client-key.der" ]

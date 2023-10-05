@@ -23,19 +23,6 @@ spec:
       serviceAccountName: tasks
       {{ end }}
       terminationGracePeriodSeconds: 300
-      initContainers:
-        - name: permission-hack
-          imagePullPolicy: Always
-          image: "{{ .Values.api_image_url }}"
-          command: [ "sh", "-c", "chmod 600 /opt/shieldrule-api/certs/client-key.der/client-key.der" ]
-          volumeMounts:
-            - mountPath: /tmp
-              name: shieldrule-api-tmpfs
-            {{ range $i, $mount := .Values.api.file_mounts -}}
-            - name: {{ $mount.name }}
-              readOnly: false
-              mountPath: {{ $mount.mount_path }}/{{ $mount.file_name }}
-            {{ end }}
       containers:
         - image: "{{ .Values.api_image_url }}"
           imagePullPolicy: Always
@@ -114,6 +101,7 @@ spec:
         - name: {{ $mount.name }}
           configMap:
             name: {{ $mount.config_map_name }}
+            defaultMode: 384
             items:
               - key: {{ $mount.name }}
                 path: {{ $mount.file_name }}

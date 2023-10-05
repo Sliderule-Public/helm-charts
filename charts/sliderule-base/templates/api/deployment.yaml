@@ -101,7 +101,6 @@ spec:
         - name: {{ $mount.name }}
           configMap:
             name: {{ $mount.config_map_name }}
-            defaultMode: 384
             items:
               - key: {{ $mount.name }}
                 path: {{ $mount.file_name }}

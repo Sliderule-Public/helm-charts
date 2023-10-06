@@ -20,7 +20,7 @@ spec:
         {{- end }}
     spec:
       {{ if .Values.service_account_role }}
-      serviceAccountName: tasks
+      serviceAccountName:  {{ .Values.api_service_account_name }}
       {{ end }}
       terminationGracePeriodSeconds: 300
       containers:
@@ -51,8 +51,6 @@ spec:
               memory: {{ .Values.api.resources.limits.memory }}
               cpu: {{ .Values.api.resources.limits.cpu }}
           env:
-            - name: SHIELDRULE_ENVIRONMENT
-              value: {{ .Values.SHIELDRULE_ENVIRONMENT | quote }}
             - name: SERVICE
               value: "api"
             {{- range $k, $v := .Values.api.env_vars }}

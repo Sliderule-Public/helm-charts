@@ -19,7 +19,7 @@ spec:
         {{ $k }}: {{ $v }}
         {{- end }}
     spec:
-      {{ if .Values.service_account_role }}
+      {{- if or (.Values.service_account_role) (.Values.api_service_account_name) }}
       serviceAccountName:  {{ .Values.api_service_account_name }}
       {{ end }}
       terminationGracePeriodSeconds: 300

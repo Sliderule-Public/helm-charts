@@ -15,6 +15,7 @@ spec:
       labels:
         app: shieldrule-web
         role: shieldrule-web-role
+        trigger: true
         {{- range $k, $v := .Values.web.labels }}
         {{ $k }}: {{ $v }}
         {{- end }}

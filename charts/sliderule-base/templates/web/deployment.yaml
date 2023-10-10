@@ -19,8 +19,8 @@ spec:
         {{ $k }}: {{ $v }}
         {{- end }}
     spec:
-      {{ if .Values.service_account_role }}
-      serviceAccountName: aws-role
+      {{- if or (.Values.service_account_role) (.Values.service_account_name) }}
+      serviceAccountName:  {{ .Values.service_account_name }}
       {{ end }}
       securityContext:
         runAsUser: 101

@@ -9,6 +9,12 @@ deploy_jobs: true
 # -- if true, will deploy the prometheus service as a sidecar in the API pod
 enable_prometheus: true
 
+# Optional AWS Service account role to pass, this is being deprecated in the future in favor of service_account_name
+service_account_role: ""
+
+# Optional service account name to pass to both the API and Web deployments
+service_account_name: ""
+
 # -- port to expose NodePort services on
 ports:
   web: 31255

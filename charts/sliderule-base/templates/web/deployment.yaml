@@ -16,7 +16,7 @@ spec:
         app: shieldrule-web
         role: shieldrule-web-role
         {{- range $k, $v := .Values.web.labels }}
-        {{ $k }}: {{ $v }}
+        {{ $k }}: {{ $v | quote }}
         {{- end }}
     spec:
       {{- if or (.Values.service_account_role) (.Values.service_account_name) }}

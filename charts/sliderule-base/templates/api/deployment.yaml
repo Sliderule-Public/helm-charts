@@ -16,7 +16,7 @@ spec:
         app: shieldrule-api
         role: shieldrule-api-role
         {{- range $k, $v := .Values.api.labels }}
-        {{ $k }}: {{ $v }}
+        {{ $k }}: {{ $v | quote }}
         {{- end }}
     spec:
       {{- if or (.Values.service_account_role) (.Values.service_account_name) }}

@@ -6,3 +6,12 @@ api_url:
 grpc_url:
 
 deploy_grpc: true
+
+
+api:
+  ingress:
+    annotations: {}
+
+web:
+  ingress:
+    annotations: {}

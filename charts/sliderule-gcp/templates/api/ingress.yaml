@@ -3,9 +3,9 @@ kind: Ingress
 metadata:
   name: shieldrule-api-ingress
   annotations:
-    networking.gke.io/managed-certificates: shieldrule-cert
-    kubernetes.io/ingress.regional-static-ip-name: shieldrule-api
-    kubernetes.io/ingress.class: "gce"
+    {{- range $k, $v := .Values.api.ingress.annotations }}
+    {{ $k }}: {{ $v }}
+    {{- end }}
 spec:
   rules:
     - host: {{ .Values.api_url}}

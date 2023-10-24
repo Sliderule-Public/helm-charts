@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: shieldrule-web-ingress
   annotations:
-    {{- range $k, $v := .Values.api.ingress.annotations }}
+    {{- range $k, $v := .Values.web.ingress.annotations }}
     {{ $k }}: {{ $v }}
     {{- end }}
 spec:

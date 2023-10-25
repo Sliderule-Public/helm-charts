@@ -36,6 +36,27 @@ spec:
               name: shieldrule-web-nginx-html
             - mountPath: /etc/nginx/conf.d/
               name: shieldrule-web-nginx-config
+      {{- if .Values.web.tolerations}}
+      tolerations:
+        {{- range .Values.web.tolerations }}
+        - key: {{ .key }}
+          operator: {{ .operator }}
+          value: {{ .value }}
+          effect: {{ .effect }}
+        {{- end }}
+      {{- end }}
+      {{- if .Values.web.nodeSelector }}
+      nodeSelector:
+        {{- range $k, $v := .Values.web.nodeSelector }}
+        {{ $k }}: {{ $v | quote }}
+        {{- end }}
+      {{- end }}
+      {{- if .Values.web.affinity }}
+      affinity:
+        {{- range $k, $v := .Values.web.affinity }}
+        {{ $k }}: {{ $v | quote }}
+        {{- end }}
+      {{- end }}
       containers:
         - image: "{{ .Values.web_image_url }}"
           imagePullPolicy: Always

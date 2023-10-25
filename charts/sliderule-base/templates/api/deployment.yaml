@@ -23,6 +23,27 @@ spec:
       serviceAccountName:  {{ .Values.service_account_name }}
       {{ end }}
       terminationGracePeriodSeconds: 300
+      {{- if .Values.api.tolerations}}
+      tolerations:
+        {{- range .Values.api.tolerations }}
+        - key: {{ .key }}
+          operator: {{ .operator }}
+          value: {{ .value }}
+          effect: {{ .effect }}
+        {{- end }}
+      {{- end }}
+      {{- if .Values.api.nodeSelector }}
+      nodeSelector:
+        {{- range $k, $v := .Values.api.nodeSelector }}
+        {{ $k }}: {{ $v | quote }}
+        {{- end }}
+      {{- end }}
+      {{- if .Values.api.affinity }}
+      affinity:
+        {{- range $k, $v := .Values.api.affinity }}
+        {{ $k }}: {{ $v | quote }}
+        {{- end }}
+      {{- end }}
       containers:
         - image: "{{ .Values.api_image_url }}"
           imagePullPolicy: Always

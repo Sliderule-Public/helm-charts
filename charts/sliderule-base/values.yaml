@@ -47,6 +47,9 @@ web:
       memory: "1024Mi"
       # -- cpu limit for each web pod
       cpu: "512m"
+  nodeSelector: {}
+  affinity: {}
+  tolerations: []
 
 # -- default resources for the API service
 api:
@@ -81,3 +84,6 @@ api:
       memory: "14500Mi"
       # -- cpu limit for each API pod
       cpu: "3400m"
+  nodeSelector: {}
+  affinity: {}
+  tolerations: []

@@ -50,6 +50,16 @@ web:
   nodeSelector: {}
   affinity: {}
   tolerations: []
+  horizontalPodAutoscaling:
+    enabled: true
+    spec:
+      scaleTargetRef:
+        apiVersion: apps/v1
+        kind: Deployment
+        name: shieldrule-web
+      minReplicas: 2
+      maxReplicas: 10
+      targetCPUUtilizationPercentage: 50
 
 # -- default resources for the API service
 api:
@@ -87,3 +97,13 @@ api:
   nodeSelector: {}
   affinity: {}
   tolerations: []
+  horizontalPodAutoscaling:
+    enabled: true
+    spec:
+      scaleTargetRef:
+        apiVersion: apps/v1
+        kind: Deployment
+        name: shieldrule-api
+      minReplicas: 2
+      maxReplicas: 10
+      targetCPUUtilizationPercentage: 50

@@ -3,6 +3,5 @@ apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
   name: shieldrule-api
-spec:
-  {{ .Values.api.horizontalPodAutoscaling.spec }}
+spec: {{ .Values.api.horizontalPodAutoscaling.spec | toYaml | trim | nindent 2 }}
 {{ end }}

@@ -36,6 +36,7 @@ web:
     protocol: TCP
     port: 8000
     targetPort: 8000
+    annotations: {}
   resources:
     requests:
       # -- memory request for each web pod
@@ -83,6 +84,7 @@ api:
     protocol: TCP
     port: 8000
     targetPort: 8000
+    annotations: {}
   resources:
     requests:
       # -- memory request for each API pod

@@ -7,8 +7,8 @@ metadata:
 spec:
   healthCheck:
     checkIntervalSec: 15
-    port: 8000
+    port: 80
     type: HTTP
-    requestPath: /
+    requestPath: /actuator/health
 
 {{- end }}

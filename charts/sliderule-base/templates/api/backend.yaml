@@ -8,7 +8,7 @@ spec:
   healthCheck:
     checkIntervalSec: 15
     port: 9520
-    type: gRPC
+    type: HTTP/2
     requestPath: /
 
 {{- end }}

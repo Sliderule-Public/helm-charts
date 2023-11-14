@@ -15,6 +15,8 @@ service_account_role: ""
 # Optional service account name to pass to both the API and Web deployments
 service_account_name: ""
 
+is_gcp: false
+
 # -- port to expose NodePort services on
 ports:
   web: 31255

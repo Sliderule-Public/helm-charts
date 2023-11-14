@@ -1,0 +1,14 @@
+{{- if .Values.is_gcp }}
+
+apiVersion: cloud.google.com/v1
+kind: BackendConfig
+metadata:
+  name: api_grpc_backend
+spec:
+  healthCheck:
+    checkIntervalSec: 15
+    port: 9520
+    type: gRPC
+    requestPath: /
+
+{{- end }}

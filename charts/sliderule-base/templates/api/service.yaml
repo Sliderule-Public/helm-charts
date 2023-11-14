@@ -6,6 +6,9 @@ metadata:
     {{- range $k, $v := .Values.api.service.annotations }}
     {{ $k }}: {{ $v | quote }}
     {{- end }}
+    {{- if .Values.is_gcp }}
+    cloud.google.com/backend-config: '{"default": "api_grpc_backend"}'
+    {{- end }}
 spec:
   type: NodePort
   selector:

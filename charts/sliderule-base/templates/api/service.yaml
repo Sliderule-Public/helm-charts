@@ -8,6 +8,7 @@ metadata:
     {{- end }}
     {{- if .Values.is_gcp }}
     cloud.google.com/backend-config: '{"ports": {"grpc":"api-grpc-backend"}}'
+    cloud.google.com/app-protocols: '{"grpc":"HTTP2"}'
     {{- end }}
 spec:
   type: NodePort

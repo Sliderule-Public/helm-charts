@@ -3,7 +3,7 @@
 apiVersion: cloud.google.com/v1
 kind: BackendConfig
 metadata:
-  name: api_grpc_backend
+  name: api-grpc-backend
 spec:
   healthCheck:
     checkIntervalSec: 15

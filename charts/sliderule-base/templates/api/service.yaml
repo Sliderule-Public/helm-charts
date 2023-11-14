@@ -19,7 +19,6 @@ spec:
     - name: {{ .Values.api.service.name }}
       port: {{ .Values.api.service.port }}
       targetPort: {{ .Values.api.service.targetPort }}
-      nodePort: {{ .Values.api.service.nodePort }}
       protocol: {{ .Values.api.service.protocol }}
     - port: 9520
       targetPort: 9520

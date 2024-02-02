@@ -51,7 +51,7 @@ spec:
       terminationGracePeriodSeconds: 300
       containers:
         - name: postgres
-          image: postgres:10.1
+          image: postgres:15.3
           imagePullPolicy: "IfNotPresent"
           ports:
             - containerPort: 5432

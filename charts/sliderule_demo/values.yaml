@@ -10,7 +10,7 @@ USE_REDIS: true
 USE_SQS: true
 ENVIRONMENT: sliderule-demo
 
-POSTGRES_HOST:
+POSTGRES_HOST: shieldrule-db-service
 POSTGRES_PORT: 5432
 POSTGRES_DB: "sliderulesample"
 POSTGRES_USER: "sliderulesample"

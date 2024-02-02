@@ -53,7 +53,7 @@ spec:
                 - all
           env:
             - name: POSTGRES_HOST
-              value: shieldrule-db-service
+              value: {{ .Values.POSTGRES_HOST | quote }}
             - name: POSTGRES_PORT
               value: {{ .Values.POSTGRES_PORT | quote }}
             - name: POSTGRES_USER

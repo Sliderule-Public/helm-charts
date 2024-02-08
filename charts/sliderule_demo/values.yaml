@@ -46,6 +46,7 @@ web:
 
 # default resources for the API service
 api:
+  tag: demo
   count: 1
   resources:
     requests:

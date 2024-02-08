@@ -18,7 +18,7 @@ spec:
     spec:
       terminationGracePeriodSeconds: 300
       containers:
-        - image: "{{ .Values.api_image_url }}:{{ .Values.SHIELDRULE_ENVIRONMENT }}"
+        - image: "{{ .Values.api_image_url }}:{{ .Values.api.tag }}"
           imagePullPolicy: Always
           name: shieldrule-api
           ports:

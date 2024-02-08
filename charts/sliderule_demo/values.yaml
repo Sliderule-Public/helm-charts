@@ -29,6 +29,7 @@ REDIS_HOST:
 REDIS_PORT:
 SQS_QUEUE_NAME: modernlogic-demo-sls
 SQS_URL:
+READ_ONLY_MODE: false
 
 web_image_url: 600592424179.dkr.ecr.us-west-1.amazonaws.com/shieldrule-web
 api_image_url: 600592424179.dkr.ecr.us-west-1.amazonaws.com/shieldrule-api

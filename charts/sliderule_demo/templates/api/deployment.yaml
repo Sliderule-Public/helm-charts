@@ -104,6 +104,8 @@ spec:
               value: {{ .Values.SQS_URL | quote }}
             - name: SERVER_MODE
               value: {{ .Values.SERVER_MODE | quote }}
+            - name: READ_ONLY_MODE
+              value: {{ .Values.READ_ONLY_MODE | quote }}
       restartPolicy: Always
       volumes:
         - emptyDir: { }

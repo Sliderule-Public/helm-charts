@@ -60,6 +60,10 @@ api:
       # -- cpu limit for each API pod
       cpu: "3400m"
 
+jaeger:
+  enabled: false
+  target_group_arn:
+
 
 # -- POSTGRES_HOST from the Terraform stack
 POSTGRES_HOST:

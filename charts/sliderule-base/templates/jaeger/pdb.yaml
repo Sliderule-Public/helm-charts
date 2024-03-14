@@ -1,0 +1,11 @@
+{{ if .Values.jaeger.enabled }}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: jaeger
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: sliderule-jaeger
+{{ end }}

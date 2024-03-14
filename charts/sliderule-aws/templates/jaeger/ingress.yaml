@@ -1,0 +1,22 @@
+{{ if .Values.enable_aws_alb }}
+{{ if .Values.jaeger.enabled }}
+
+apiVersion: elbv2.k8s.aws/v1beta1
+kind: TargetGroupBinding
+metadata:
+  name: jaeger-tgb
+spec:
+  serviceRef:
+    name: jaeger
+    port: 16686
+  targetGroupARN: {{ .Values.jaeger.target_group_arn }}
+  networking:
+    ingress:
+      - from:
+          - securityGroup:
+              groupID: {{ .Values.alb_sg_id }}
+        ports:
+          - port: 16686
+            
+{{ end }}
+{{ end }}

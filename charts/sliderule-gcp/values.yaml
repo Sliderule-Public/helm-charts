@@ -19,5 +19,7 @@ web:
     annotations: {}
 
 jaeger:
+  ingress:
+    annotations: { }
   enabled: false
   url:
